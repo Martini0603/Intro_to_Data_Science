@@ -1,0 +1,39 @@
+1. Modules
+  NumPy
+  : numpy is so widespread it might as well be considered part of the Python language. 
+  Basically any program with mathematical equations or data manipulation uses NumPy. 
+  This includes the other modules we're about to look at!
+
+  Matplotlib
+  : matplotlib is one of the most popular visualization libraries for Python (although there are others). 
+  Its name comes from its inspiration from the MATLAB plotting library. If you've used MATLAB, this will look familiar.
+
+  SciPy
+  : scipy is a more specialized package for scientific computing. It includes things like integration, optimization, and statistical distributions.
+
+  Pandas
+  : pandas is a library for reading, writing, and analyzing data. 
+  It contains wrappers to do a lot of the things these other libraries do (by calling their functions behind the scenes). 
+  While we will use all four of these in class, you may end up mostly relying on Pandas "in the wild."
+  
+2. Importing modules
+  
+  import numpy
+  
+3. Aliases
+  
+  import numpy as np
+
+4. Dataframes
+  - documentation
+  at: Access a single value for a row/column label pair.
+  loc: Access a group of rows and columns by label(s) or a boolean array.
+  iat: Access a single value for a row/column pair by integer position.
+  iloc: Purely integer-location based indexing for selection by position.
+  
+  # using `loc[]` with [index][column]
+  # using `iloc[]` with [index_integer, column_integer]
+
+5. Indexing
+
+
