@@ -1,4 +1,4 @@
-# Python Syntax
+## Python Syntax
 
 # to print a number:
 x = 5
@@ -10,4 +10,22 @@ help(print)
 
 x = 1  # this changes the value from before!
 my_variable = 'abc'
+
+#ex
+a_variable_with_a_long_name = 1
+MyMixedCaseVariable = 2
+c = 3
+
+print(a_variable_with_a_long_name)
+print(MyMixedCaseVariable)
+print(c)
+
+# variable is case sensitive
+print(mymixedcasevariable)
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-13-871f55577e62> in <module>()
+----> 1 print(mymixedcasevariable)
+
+NameError: name 'mymixedcasevariable' is not defined
 
