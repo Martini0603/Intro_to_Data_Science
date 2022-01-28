@@ -1,5 +1,5 @@
 ## Python Syntax
-
+----------------
 # to print a number:
 x = 5
 print(x) 
@@ -8,7 +8,7 @@ print(x)
 help(print)
 # You can get information about functions using help
 
-x = 1  # this changes the value from before!
+x = 1  # this changes the value from before
 my_variable = 'abc'
 
 #ex
@@ -28,4 +28,37 @@ NameError                                 Traceback (most recent call last)
 ----> 1 print(mymixedcasevariable)
 
 NameError: name 'mymixedcasevariable' is not defined
+
+## Manipulating variables
+-------------------------
+x = 1 * 2  # x will be 2
+x = x + 3  # x will be 2 + 3 = 5
+print(x)   # print the value to see # =5
+
+x = 1
+y = 2
+z = 3
+print(x * y + z) # =5
+
+print(a_variable_with_a_long_name) # =1
+print(a_variable_with_a_long_name * 2) # =2
+print(a_variable_with_a_long_name + 5) # =6
+# If a variable is defined, its value persists between code blocks
+
+x = 1
+print(x) # =1
+x += 1
+print(x) # =2
+x += x  # we can also use variable values
+print(x) # =4
+x *= 2  # we can use +, -, *, and / this way
+print(x) # =8
+# Use a shorthand += or -= to increment or decrement
+
+## Functions
+------------
+print(x)            # this will write "1" (from x = 1 above)
+print(my_variable)  # this will write "abc" (from my_variable = 'abc' above)
+print("some text")  # we can also call print on an input that's not a variable
+print(x, 'text')    # print can take multiple arguments separated by commas
 
