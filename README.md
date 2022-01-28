@@ -1,4 +1,3 @@
-# MATSE297_Lecture_8
-Modules
-
-- The review about modules
+# Intro Data Science
+- Simple notes about introduction to data science with using Python
+- 
