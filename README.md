@@ -1,4 +1,4 @@
 # MATSE297_Lecture_8
-Lecture 8
+Modules
 
 - The review about modules
