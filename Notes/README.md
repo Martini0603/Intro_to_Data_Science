@@ -4,7 +4,6 @@
 ## Python syntax and modules
 
 [Note 1]
-* Python, Jupyter, and Google Colab
 * Python syntax: variables and functions
 * Basic `lists` and indexing
 
