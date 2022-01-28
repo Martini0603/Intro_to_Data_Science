@@ -1,10 +1,13 @@
 # Python Syntax
 
+# to print a number:
 x = 5
-print(x) # to print a number:
+print(x) 
 # '#' symbol creats a comment
 
 help(print)
 # You can get information about functions using help
 
+x = 1  # this changes the value from before!
+my_variable = 'abc'
 
