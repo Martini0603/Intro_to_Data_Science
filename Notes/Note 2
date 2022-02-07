@@ -1,4 +1,5 @@
 ## Modules
+----------
 : Python modules are pieces of code that other people have written and posted on the internet for free distribution. 
   NumPy
   : numpy is so widespread it might as well be considered part of the Python language. 
@@ -18,10 +19,107 @@
   While we will use all four of these in class, you may end up mostly relying on Pandas "in the wild."
 
 ## Importing modules
+--------------------
+
 import numpy
 print(numpy)
 
 ## Aliases
+----------
+# You can rename things with the 'as' keyword
+
+import numpy as np
+print(np)
+
+## Documentation
+----------------
+
+import matplotlib.pyplot as plt
+import numpy as np
+fig, ax = plt.subplots() # Create a figure containing a single axes
+ax.plot([0, 1, 2, 3], [4, 5, 3, 6])
+
+# We can use 'from' keyword
+from matplotlib import pyplot as plt
+
+## Reading data with Pandas
+---------------------------
+# Data can be stored in many forms. Pandas gives us convenient ways to structure data look more like the user experience in Excel.
+
+import pandas as pd
+data = pd.read_csv('datafile_name') # load into pandas
+data                                # show a view of the data file
+
+## DataFrames
+-------------
+* at: Access a single value for a row/column label pair
+* loc: Access a group of rows and columns by label or a boolean array
+* iat: Access a single value for a row/column pair by integer position
+* iloc: Purely integer-location based indexing for selection by position
+
+# using 'loc[]' with [index][column]
+print(data.loc[0, 'Element'])
+
+# using 'iloc[]' with [index_integer, column_ingeter]
+pritn(data.iloc[0, 0])
+
+* index_col: Columns to use as the row labels of the DataFrame
+
+ele_data = pd.read_csv('data.csv', index_col='Element') # load into pandas using Element as the index
+ele_data                                                # show a view of the data file
+
+## Indexing practice
+--------------------
+# Using ':' to get the elements starting with the number to the left and ending with one less than the number on the right
+
+print(ele_data.iloc[0, 0:3])
+print(ele_data.iloc[0, :]) # access a whole column by specifiying a row only
+print('')                  # give a line break between print statements
+print(ele_data.iloc[:, 0]) # access a whole row by specifying a column only
+
+## Defining your own DataFrame
+------------------------------
+import pandas as pd
+
+my_list = [[1, 2, 3, 4, 5],
+          [6, 7, 8, 9, 10]]
+columns = ['a', 'b', 'c', 'd', 'e']
+my_df = pd.DataFrame(my_list, columns=columns)
+my_df
+
+my_list.append([5, 4, 3, 2, 1]) # we can add another row
+
+my_df = pd.DataFrame(my_list, columns=columns)
+my_df
+
+## Adding new columns
+---------------------
+ele_data['Melts below 800 K'] = ele_data.loc[:, 'Melting Point (K)'] < 800
+ele_data.head()  # head prints the first 5 rows of the dataframe
+
+## Creating derivative DataFrames
+---------------------------------
+ele_structure = ele_data.loc[:,['Structure']]
+ele_structure.head()
+
+## Cleaning missing data
+------------------------
+import numpy as np 
+
+my_list = [[0, 1, 2], [3, np.NaN, 5], [6, 7, 8]] # NaN = Not a Number
+
+my_df = pd.DataFrame(my_list, columns=['A', 'B', 'C'])
+my_df
+
+my_df.dropna() # we can drop rows with NaN
+
+my_df.dropna(subset=['B']) # since .dropna causes losing all data in the same column with NaN, it is better to use 'subset' keyword
+
+
+
+
+
+
 
 
 
