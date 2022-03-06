@@ -1,1 +1,57 @@
+## Numpy
+--------
+: a popular library for scientific computing that contains fast and convenient functions for linear algebra
+import numpy as np
 
+my_list = ['a', 'b', 'c', 'd', 'e']
+print(my_list)                                # ['a', 'b', 'c', 'd', 'e']
+my_vector = np.array( my_list )
+print(my_vector)                              # ['a' 'b' 'c' 'd' 'e']
+
+# same indexing rules
+
+## Using array methods
+----------------------
+# argmax
+> Returns the indices of the maximum values along an axis
+
+# We can add values to vectors
+my_vector = np.array([0, 1, 2])
+print(my_vector + 1)                          # [1 2 3]
+
+vec_A = np.array([0, 1, 2])
+vec_B = np.array([1, 1, 2])
+print(vec_A + vec_B)     # add them element-wise
+print(vec_A * vec_B)     # multiply them element-wise
+print(vec_A.dot(vec_B))  # take dot product
+
+## Array dimensions
+-------------------
+my_matrix = np.array([ [0, 1, 2], [3, 4, 5] ])
+print(my_matrix)
+
+#[[0 1 2]
+ [3 4 5]]
+ 
+print(my_matrix.shape)                        # (2, 3)
+
+my_matrix = np.array([ [0, 1, 2], [3, 4, 5] ], dtype=float)
+print(my_matrix)
+print(my_matrix.dtype)
+
+#[[0. 1. 2.]
+ [3. 4. 5.]]
+float64
+
+print(my_matrix + 1)      # add 1 to every element
+print(my_matrix + vec_A)  # add vec_A to every row
+
+vec_C = np.array([[0], [1]])
+print(vec_C)
+print(my_matrix + vec_C)  # try to add vec_C to every column
+
+# 
+[[0]
+ [1]]
+[[0 1 2]
+ [4 5 6]]
